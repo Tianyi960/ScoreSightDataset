@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='utf-8'?>
+<score-partwise version="3.1">
+  <identification>
+    <encoding>
+      <software>MuseScore 3.6.2</software>
+      <encoding-date>2025-01-14</encoding-date>
+      <supports element="accidental" type="yes" />
+      <supports element="beam" type="yes" />
+      <supports element="print" attribute="new-page" type="yes" value="yes" />
+      <supports element="print" attribute="new-system" type="yes" value="yes" />
+      <supports element="stem" type="yes" />
+    </encoding>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>7.05556</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+    <page-layout>
+      <page-height>1584</page-height>
+      <page-width>1224</page-width>
+      <page-margins type="even">
+        <left-margin>56.6929</left-margin>
+        <right-margin>56.6929</right-margin>
+        <top-margin>56.6929</top-margin>
+        <bottom-margin>113.386</bottom-margin>
+      </page-margins>
+      <page-margins type="odd">
+        <left-margin>56.6929</left-margin>
+        <right-margin>56.6929</right-margin>
+        <top-margin>56.6929</top-margin>
+        <bottom-margin>113.386</bottom-margin>
+      </page-margins>
+    </page-layout>
+    <word-font font-family="FreeSerif" font-size="10" />
+    <lyric-font font-family="FreeSerif" font-size="11" />
+  </defaults>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Piano</part-name>
+      <part-abbreviation>Pno.</part-abbreviation>
+      <score-instrument id="P1-I1">
+        <instrument-name>Piano</instrument-name>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1" />
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>78.7402</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="7" width="127.14">
+      <attributes>
+        <divisions>4</divisions>
+        <key>
+          <fifths>0</fifths>
+        </key>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="6.58" default-y="-40.00" relative-y="-40.00">
+            <mp />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="71.11" />
+      </direction>
+      <note default-x="19.52" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="19.52" default-y="-15.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <alter>-1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>flat</accidental>
+        <staff>1</staff>
+      </note>
+      <note default-x="19.52" default-y="0.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <note>
+        <rest />
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="6.58" default-y="-40.00" relative-y="-40.00">
+            <mf />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+        <sound dynamics="88.89" />
+      </direction>
+      <note default-x="70.86" default-y="-155.00">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <glissando line-type="wavy" number="1" type="start" default-y="-146.60">gliss.</glissando>
+        </notations>
+      </note>
+      <note default-x="101.53" default-y="-135.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <glissando line-type="wavy" number="1" type="stop" />
+        </notations>
+      </note>
+    </measure>
+    <measure number="8" width="127.14">
+      <direction placement="below">
+        <direction-type>
+          <words font-family="FreeSerif" font-size="12" font-style="italic" default-y="-80.00" relative-x="-30.38">dim.</words>
+        </direction-type>
+        <direction-type>
+          <dashes type="start" number="1" default-y="-80.00" relative-x="-30.38" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="19.52" default-y="-35.00">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="19.52" default-y="-15.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <alter>-1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>flat</accidental>
+        <staff>1</staff>
+      </note>
+      <note default-x="19.52" default-y="0.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <dashes type="stop" number="1" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <words font-family="FreeSerif" font-size="12" font-style="italic" default-y="-80.00" relative-x="-31.50">dim.</words>
+        </direction-type>
+        <direction-type>
+          <dashes type="start" number="1" default-y="-80.00" relative-x="-31.50" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note>
+        <rest />
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <note default-x="70.86" default-y="-165.00">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <glissando line-type="wavy" number="1" type="start" default-y="-156.60">gliss.</glissando>
+        </notations>
+      </note>
+      <note default-x="101.53" default-y="-145.00">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <glissando line-type="wavy" number="1" type="stop" />
+        </notations>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <dashes type="stop" number="1" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="9" width="56.73">
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="6.58" default-y="-40.00" relative-y="-40.00">
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="54.44" />
+      </direction>
+      <note default-x="19.52" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="19.52" default-y="-15.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <alter>-1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>flat</accidental>
+        <staff>1</staff>
+      </note>
+      <note default-x="19.52" default-y="0.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="6.58" default-y="-40.00" relative-y="-40.00">
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+        <sound dynamics="54.44" />
+      </direction>
+      <note default-x="19.52" default-y="-125.00">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="10" width="55.50">
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>1</voice>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="11" width="55.50">
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>1</voice>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="12" width="55.50">
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>1</voice>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="13" width="55.50">
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>1</voice>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="14" width="55.50">
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>1</voice>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>16</duration>
+      </backup>
+      <note>
+        <rest measure="yes" />
+        <duration>16</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+      </note>
+    </measure>
+  </part>
+</score-partwise>

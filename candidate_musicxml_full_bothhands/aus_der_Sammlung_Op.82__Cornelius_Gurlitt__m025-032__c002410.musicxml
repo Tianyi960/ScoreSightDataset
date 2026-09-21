@@ -1,0 +1,848 @@
+<?xml version='1.0' encoding='utf-8'?>
+<score-partwise version="3.1">
+  <work>
+    <work-title>Erste Spielstücke am Klavier</work-title>
+  </work>
+  <identification>
+    <creator type="arranger">A.D. Musikschule Tastenläufer</creator>
+    <creator type="composer">Cornelius Gurlitt</creator>
+    <encoding>
+      <software>MuseScore 3.6.2</software>
+      <encoding-date>2025-01-14</encoding-date>
+      <supports element="accidental" type="yes" />
+      <supports element="beam" type="yes" />
+      <supports element="print" attribute="new-page" type="yes" value="yes" />
+      <supports element="print" attribute="new-system" type="yes" value="yes" />
+      <supports element="stem" type="yes" />
+    </encoding>
+    <source>https://musescore.com/score/3971246</source>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>6</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+    <page-layout>
+      <page-height>1980</page-height>
+      <page-width>1400</page-width>
+      <page-margins type="both">
+        <left-margin>100</left-margin>
+        <right-margin>100</right-margin>
+        <top-margin>100</top-margin>
+        <bottom-margin>100</bottom-margin>
+      </page-margins>
+    </page-layout>
+    <word-font font-family="FreeSerif" font-size="10" />
+    <lyric-font font-family="Times New Roman" font-size="9.8327" />
+  </defaults>
+  <credit page="1">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1300" default-y="1839" justify="right" valign="bottom" font-family="Times New Roman" font-size="9.4341">Cornelius Gurlitt</credit-words>
+  </credit>
+  <credit page="1">
+    <credit-type>title</credit-type>
+    <credit-words default-x="699.999" default-y="1880.59" justify="center" valign="top" font-family="Times New Roman" font-size="18.8681">aus der Sammlung Op.82.</credit-words>
+  </credit>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Piano</part-name>
+      <part-abbreviation>Pno.</part-abbreviation>
+      <score-instrument id="P1-I1">
+        <instrument-name>Piano (2)</instrument-name>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1" />
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>78.7402</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="25" width="104.12">
+      <attributes>
+        <divisions>1</divisions>
+        <key>
+          <fifths>-1</fifths>
+          <mode>major</mode>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+      </attributes>
+      <note default-x="15.84" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>3</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="above" number="1" />
+        </notations>
+      </note>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">3</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="16.20" default-y="-149.94">
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <accidental>flat</accidental>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">2</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="44.97" default-y="-144.94">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">1</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="73.75" default-y="-134.94">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="26" width="104.12">
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">3</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="15.84" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">1</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="73.75" default-y="-35.00">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+        </notations>
+      </note>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="16.20" default-y="-149.94">
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <accidental>flat</accidental>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="44.97" default-y="-144.94">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="73.75" default-y="-134.94">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="27" width="100.65">
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">5</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="12.36" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="above" number="1" />
+        </notations>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">4</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="70.27" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>1</duration>
+        <tie type="start" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <tied type="start" />
+        </notations>
+      </note>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">4</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="12.72" default-y="-154.94">
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">2</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="41.50" default-y="-144.94">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="70.27" default-y="-129.94">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <notations>
+          <articulations>
+            <staccatissimo />
+          </articulations>
+        </notations>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="28" width="100.65">
+      <note default-x="12.36" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <tie type="stop" />
+        <voice>1</voice>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">3</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="70.27" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>1</duration>
+        <tie type="start" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <tied type="start" />
+        </notations>
+      </note>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">5</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="12.72" default-y="-159.94">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">3</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="41.50" default-y="-154.94">
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">1</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="70.27" default-y="-134.94">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="29" width="100.28">
+      <note default-x="12.00" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <tie type="stop" />
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <note default-x="69.91" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">5</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="12.36" default-y="-164.94">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>2</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">2</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="41.14" default-y="-144.94">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">1</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="69.91" default-y="-139.94">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="30" width="100.65">
+      <note default-x="12.36" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <note default-x="70.27" default-y="-40.00">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <wedge type="stop" number="1" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">5</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="12.72" default-y="-159.94">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">2</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="41.50" default-y="-139.94">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-x="-1.04" relative-y="24.86" font-weight="bold" font-family="Times New Roman" font-size="5.9793">1</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="70.27" default-y="-129.94">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="31" width="104.65">
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">3</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <wedge type="diminuendo" number="1" default-y="-75.00" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="12.00" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>3</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="below" number="2" />
+        </notations>
+      </note>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">5</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="12.36" default-y="-144.94">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">2</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="42.59" default-y="-129.94">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">1</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="72.82" default-y="-124.94">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="32" width="92.12">
+      <direction placement="above">
+        <direction-type>
+          <words relative-y="40.00" font-weight="bold" font-family="Times New Roman" font-size="5.9793">2</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="12.36" default-y="-35.00">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+          <slur type="stop" number="2" />
+        </notations>
+      </note>
+      <note>
+        <rest />
+        <duration>1</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>3</duration>
+      </backup>
+      <direction placement="above">
+        <direction-type>
+          <words relative-x="-0.52" relative-y="28.59" font-weight="bold" font-family="Times New Roman" font-size="5.9793">3
+</words>
+          <words>5</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-80.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="12.36" default-y="-144.94">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="12.36" default-y="-134.94">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>1</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <barline location="right">
+        <bar-style>light-heavy</bar-style>
+      </barline>
+    </measure>
+  </part>
+</score-partwise>

@@ -1,0 +1,1235 @@
+<?xml version='1.0' encoding='utf-8'?>
+<score-partwise version="3.1">
+  <identification>
+    <encoding>
+      <software>MuseScore 3.6.2</software>
+      <encoding-date>2025-01-14</encoding-date>
+      <supports element="accidental" type="yes" />
+      <supports element="beam" type="yes" />
+      <supports element="print" attribute="new-page" type="yes" value="yes" />
+      <supports element="print" attribute="new-system" type="yes" value="yes" />
+      <supports element="stem" type="yes" />
+    </encoding>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>6.256</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+    <page-layout>
+      <page-height>1898.98</page-height>
+      <page-width>1342.71</page-width>
+      <page-margins type="even">
+        <left-margin>63.9386</left-margin>
+        <right-margin>63.9386</right-margin>
+        <top-margin>63.9386</top-margin>
+        <bottom-margin>127.877</bottom-margin>
+      </page-margins>
+      <page-margins type="odd">
+        <left-margin>63.9386</left-margin>
+        <right-margin>63.9386</right-margin>
+        <top-margin>63.9386</top-margin>
+        <bottom-margin>127.877</bottom-margin>
+      </page-margins>
+    </page-layout>
+    <word-font font-family="FreeSerif" font-size="10" />
+    <lyric-font font-family="FreeSerif" font-size="11" />
+  </defaults>
+  <credit page="1">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Ciao!</credit-words>
+  </credit>
+  <credit page="1">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Célèbre valse italienne</credit-words>
+  </credit>
+  <credit page="1">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">XX</credit-words>
+  </credit>
+  <credit page="3">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">La Berline</credit-words>
+  </credit>
+  <credit page="3">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Danse</credit-words>
+  </credit>
+  <credit page="3">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Edm. Filippucci</credit-words>
+  </credit>
+  <credit page="5">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Ronde du petit lapin</credit-words>
+  </credit>
+  <credit page="5">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Firmin Bernicat</credit-words>
+  </credit>
+  <credit page="7">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Valse de François les bas-bleus</credit-words>
+  </credit>
+  <credit page="7">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Olivier Métra</credit-words>
+  </credit>
+  <credit page="9">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">La vie est douce</credit-words>
+  </credit>
+  <credit page="9">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Valse-Boston</credit-words>
+  </credit>
+  <credit page="9">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Justin Clérice</credit-words>
+  </credit>
+  <credit page="11">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Polka des petits oiseaux</credit-words>
+  </credit>
+  <credit page="11">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Rodolphe Berger</credit-words>
+  </credit>
+  <credit page="13">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Les petits lanciers</credit-words>
+  </credit>
+  <credit page="13">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Célèbre quadrille anglais</credit-words>
+  </credit>
+  <credit page="13">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="9">Arrangé pour les
+</credit-words>
+    <credit-words>petites mains par
+</credit-words>
+    <credit-words font-size="12">Georges Micheuz</credit-words>
+  </credit>
+  <credit page="17">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Sobre las olas</credit-words>
+  </credit>
+  <credit page="17">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">(Sur les flots)</credit-words>
+  </credit>
+  <credit page="17">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Juventino Rosas</credit-words>
+  </credit>
+  <credit page="17">
+    <credit-type>lyricist</credit-type>
+    <credit-words default-x="63.9386" default-y="1735.04" justify="left" valign="bottom" font-weight="bold" font-family="Times New Roman" font-size="12">Valse</credit-words>
+  </credit>
+  <credit page="19">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Maïta</credit-words>
+  </credit>
+  <credit page="19">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Polka</credit-words>
+  </credit>
+  <credit page="19">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Paul Lacôme</credit-words>
+  </credit>
+  <credit page="21">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Pichenette-Polka</credit-words>
+  </credit>
+  <credit page="21">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Emile Tavan</credit-words>
+  </credit>
+  <credit page="23">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Les refrains du jeune âge</credit-words>
+  </credit>
+  <credit page="23">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Quadrille enfantin</credit-words>
+  </credit>
+  <credit page="23">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1631.84" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Arrangé par Emile Tavan</credit-words>
+  </credit>
+  <credit page="27">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Le Petit Poucet</credit-words>
+  </credit>
+  <credit page="27">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Polka</credit-words>
+  </credit>
+  <credit page="27">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Alfred Fock</credit-words>
+  </credit>
+  <credit page="29">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Indiana</credit-words>
+  </credit>
+  <credit page="29">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Célèbre Valse</credit-words>
+  </credit>
+  <credit page="29">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Gatien Marcailhou</credit-words>
+  </credit>
+  <credit page="31">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">L'Auvergnate</credit-words>
+  </credit>
+  <credit page="31">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Pour Piano</credit-words>
+  </credit>
+  <credit page="31">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Louis Ganne</credit-words>
+  </credit>
+  <credit page="33">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Les patineurs parisiens</credit-words>
+  </credit>
+  <credit page="33">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Danse nouvelle</credit-words>
+  </credit>
+  <credit page="33">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Edm. Filippucci</credit-words>
+  </credit>
+  <credit page="35">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Les chansons populaires</credit-words>
+  </credit>
+  <credit page="35">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Quadrille enfantin</credit-words>
+  </credit>
+  <credit page="35">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Arrangé par Emile Tavan</credit-words>
+  </credit>
+  <credit page="38">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="765.023" justify="center" valign="top" font-family="Times New Roman" font-size="24">Polka des fantoches</credit-words>
+  </credit>
+  <credit page="38">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="665.023" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Emile Tavan</credit-words>
+  </credit>
+  <credit page="40">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Les Highlanders</credit-words>
+  </credit>
+  <credit page="40">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Schottisch</credit-words>
+  </credit>
+  <credit page="40">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Gabriel Marie</credit-words>
+  </credit>
+  <credit page="42">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">Délices du bal</credit-words>
+  </credit>
+  <credit page="42">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Mazurka</credit-words>
+  </credit>
+  <credit page="42">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Emile Tavan</credit-words>
+  </credit>
+  <credit page="44">
+    <credit-type>title</credit-type>
+    <credit-words default-x="671.355" default-y="1835.04" justify="center" valign="top" font-family="Times New Roman" font-size="24">A cheval</credit-words>
+  </credit>
+  <credit page="44">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="671.355" default-y="1771.1" justify="center" valign="top" font-family="Times New Roman" font-size="14">Galop</credit-words>
+  </credit>
+  <credit page="44">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1278.77" default-y="1735.04" justify="right" valign="bottom" font-family="Times New Roman" font-size="12">Franz Hitz (1828-91)</credit-words>
+  </credit>
+  <part-list>
+    <score-part id="P1">
+      <part-name print-object="no">Piano</part-name>
+      <score-instrument id="P1-I1">
+        <instrument-name>Piano</instrument-name>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1" />
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>78.7402</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="56" width="104.86">
+      <attributes>
+        <divisions>24</divisions>
+        <key>
+          <fifths>0</fifths>
+        </key>
+        <time>
+          <beats>3</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1" after-barline="yes">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2" after-barline="yes">
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+      </attributes>
+      <note default-x="12.00" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>36</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <note default-x="57.63" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <note default-x="75.18" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="12.00" default-y="-140.00">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="40.08" default-y="-130.00">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="40.08" default-y="-120.00">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="40.08" default-y="-105.00">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="57" width="165.27">
+      <note default-x="17.23" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>36</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <note default-x="84.41" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>1</staff>
+      </note>
+      <note default-x="125.41" default-y="-35.00">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="17.23" default-y="-125.00">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="60.49" default-y="-115.00">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="48.63" default-y="-105.00">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="60.49" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="58" width="86.93">
+      <note default-x="12.00" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <accent />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="36.44" default-y="-40.00">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <accent />
+          </articulations>
+        </notations>
+      </note>
+      <note>
+        <rest />
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="12.00" default-y="-120.00">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="36.44" default-y="-110.00">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="36.44" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="59" width="123.06">
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="3.29" default-y="-40.00" relative-x="-25.16" relative-y="-37.55">
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="106.67" />
+      </direction>
+      <note default-x="29.22" default-y="10.00">
+        <grace slash="yes" />
+        <pitch>
+          <step>A</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="below" number="1" />
+          <technical>
+            <fingering font-family="FreeSerif" font-size="8">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="49.16" default-y="15.00">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+          <articulations>
+            <staccato />
+          </articulations>
+          <technical>
+            <fingering font-family="FreeSerif" font-size="8">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="73.26" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="97.36" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="49.16" default-y="-120.00">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="73.26" default-y="-110.00">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="73.26" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="97.36" default-y="-110.00">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="97.36" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="60" width="183.48">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>21.85</left-margin>
+            <right-margin>0.00</right-margin>
+          </system-margins>
+          <system-distance>139.40</system-distance>
+        </system-layout>
+        <staff-layout number="2">
+          <staff-distance>65.00</staff-distance>
+        </staff-layout>
+      </print>
+      <note default-x="69.54" default-y="25.00">
+        <grace slash="yes" />
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>6</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="below" number="1" />
+        </notations>
+      </note>
+      <note default-x="89.48" default-y="30.00">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="120.28" default-y="10.00">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="151.08" default-y="10.00">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="89.48" default-y="-120.00">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="120.28" default-y="-105.00">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="120.28" default-y="-95.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="151.08" default-y="-105.00">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="151.08" default-y="-95.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="61" width="126.37">
+      <note default-x="29.22" default-y="10.00">
+        <grace slash="yes" />
+        <pitch>
+          <step>A</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="below" number="1" />
+        </notations>
+      </note>
+      <note default-x="49.16" default-y="15.00">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="74.37" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="99.57" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="49.16" default-y="-120.00">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="74.37" default-y="-110.00">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="74.37" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="99.57" default-y="-110.00">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="99.57" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="62" width="156.82">
+      <note default-x="16.42" default-y="-5.00">
+        <grace slash="yes" />
+        <pitch>
+          <step>E</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="below" number="1" />
+        </notations>
+      </note>
+      <note default-x="50.60" default-y="0.00">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="94.02" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <note default-x="124.62" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="50.60" default-y="-135.00">
+        <pitch>
+          <step>B</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="94.02" default-y="-125.00">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="94.02" default-y="-115.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="94.02" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="124.62" default-y="-125.00">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="124.62" default-y="-115.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="124.62" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="63" width="109.39">
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="3.29" default-y="-40.00" relative-y="-40.00">
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="106.67" />
+      </direction>
+      <note default-x="12.00" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>36</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <note default-x="59.89" default-y="0.00">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <note default-x="78.31" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <note default-x="12.00" default-y="-120.00">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="41.47" default-y="-110.00">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="41.47" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+    </measure>
+  </part>
+</score-partwise>

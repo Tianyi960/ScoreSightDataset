@@ -1,0 +1,1763 @@
+<?xml version='1.0' encoding='utf-8'?>
+<score-partwise version="3.1">
+  <identification>
+    <encoding>
+      <software>MuseScore 3.6.2</software>
+      <encoding-date>2025-01-14</encoding-date>
+      <supports element="accidental" type="yes" />
+      <supports element="beam" type="yes" />
+      <supports element="print" attribute="new-page" type="yes" value="yes" />
+      <supports element="print" attribute="new-system" type="yes" value="yes" />
+      <supports element="stem" type="yes" />
+    </encoding>
+    <source>http://musescore.com/user/21118191/scores/5931436</source>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>8.468</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+    <page-layout>
+      <page-height>1402.58</page-height>
+      <page-width>992.244</page-width>
+      <page-margins type="even">
+        <left-margin>47.2367</left-margin>
+        <right-margin>47.2367</right-margin>
+        <top-margin>47.2367</top-margin>
+        <bottom-margin>94.4734</bottom-margin>
+      </page-margins>
+      <page-margins type="odd">
+        <left-margin>47.2367</left-margin>
+        <right-margin>47.2367</right-margin>
+        <top-margin>47.2367</top-margin>
+        <bottom-margin>94.4734</bottom-margin>
+      </page-margins>
+    </page-layout>
+    <word-font font-family="FreeSerif" font-size="10" />
+    <lyric-font font-family="Serif" font-size="10" />
+  </defaults>
+  <credit page="1">
+    <credit-type>title</credit-type>
+    <credit-words default-x="496.122" default-y="1340.04" justify="center" valign="top" font-size="24">Your Reality
+</credit-words>
+    <credit-words />
+  </credit>
+  <credit page="1">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="496.122" default-y="1301.54" justify="center" valign="top" font-size="14">Doki Doki Literature Club</credit-words>
+  </credit>
+  <credit page="1">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="945.007" default-y="1249.28" justify="right" valign="bottom" font-size="12">Composed by Dan Salvato
+</credit-words>
+    <credit-words>Sung by Jillian Ashcraft
+</credit-words>
+    <credit-words>Arranged by YoseiNoKyoku
+</credit-words>
+    <credit-words />
+  </credit>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Part_1</part-name>
+      <score-instrument id="P1-I1">
+        <instrument-name>Acoustic Grand Piano</instrument-name>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1" />
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>77.9528</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="16" width="244.13">
+      <attributes>
+        <divisions>16</divisions>
+        <key>
+          <fifths>0</fifths>
+        </key>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+      </attributes>
+      <note default-x="10.00" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <tie type="stop" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <note default-x="36.95" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-58.01" relative-y="-14.17">
+          <syllabic>begin</syllabic>
+          <text font-family="Hoefler Text" font-size="8">in</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-73.60" relative-y="-14.17">
+          <syllabic>end</syllabic>
+          <text font-family="Hoefler Text" font-size="8">ile</text>
+        </lyric>
+      </note>
+      <note default-x="63.90" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-58.01" relative-y="-14.17">
+          <syllabic>end</syllabic>
+          <text font-family="Hoefler Text" font-size="8">to</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-73.60" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">says</text>
+        </lyric>
+      </note>
+      <note default-x="89.56" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-58.01" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">his</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-73.60" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">it</text>
+        </lyric>
+      </note>
+      <note default-x="117.89" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-58.01" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">heart</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-73.60" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">all</text>
+        </lyric>
+      </note>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="10.00" default-y="-167.50">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="10.00" default-y="-152.50">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="10.00" default-y="-142.50">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="117.89" default-y="-172.50">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="117.89" default-y="-162.50">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="117.89" default-y="-152.50">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="181.90" default-y="-172.50">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">begin</beam>
+      </note>
+      <note default-x="198.74" default-y="-167.50">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">end</beam>
+      </note>
+      <note default-x="215.58" default-y="-172.50">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+    </measure>
+    <measure number="17" width="299.66">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>21.00</left-margin>
+            <right-margin>0.00</right-margin>
+          </system-margins>
+          <system-distance>150.00</system-distance>
+        </system-layout>
+        <staff-layout number="2">
+          <staff-distance>99.68</staff-distance>
+        </staff-layout>
+      </print>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="94.00" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">But</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">And</text>
+        </lyric>
+      </note>
+      <note default-x="126.62" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">in</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">if</text>
+        </lyric>
+      </note>
+      <note default-x="159.24" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">this</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">this</text>
+        </lyric>
+      </note>
+      <note default-x="211.44" default-y="0.00">
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">world</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">world</text>
+        </lyric>
+      </note>
+      <note default-x="263.64" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">of</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">won't</text>
+        </lyric>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="61.37" default-y="-179.68">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note default-x="61.37" default-y="-154.68">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="61.37" default-y="-144.68">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="94.00" default-y="-179.68">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">continue</beam>
+      </note>
+      <note default-x="126.62" default-y="-174.68">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note default-x="159.24" default-y="-164.68">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="211.44" default-y="-179.68">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="263.64" default-y="-174.68">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="18" width="277.37">
+      <note default-x="19.75" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>begin</syllabic>
+          <text font-family="Hoefler Text" font-size="8">in</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">write</text>
+        </lyric>
+      </note>
+      <note default-x="53.92" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">forward hook</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>middle</syllabic>
+          <text font-family="Hoefler Text" font-size="8">fin</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">me</text>
+        </lyric>
+      </note>
+      <note default-x="76.08" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>end</syllabic>
+          <text font-family="Hoefler Text" font-size="8">ite</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">an</text>
+        </lyric>
+      </note>
+      <note default-x="117.74" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>begin</syllabic>
+          <text font-family="Hoefler Text" font-size="8">choi</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>begin</syllabic>
+          <text font-family="Hoefler Text" font-size="8">end</text>
+        </lyric>
+      </note>
+      <note default-x="164.73" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>end</syllabic>
+          <text font-family="Hoefler Text" font-size="8">ces</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>end</syllabic>
+          <text font-family="Hoefler Text" font-size="8">ing</text>
+        </lyric>
+      </note>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="19.75" default-y="-174.68">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="19.75" default-y="-159.68">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="19.75" default-y="-149.68">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="117.74" default-y="-169.68">
+        <pitch>
+          <step>B</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="117.74" default-y="-159.68">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="117.74" default-y="-144.68">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="198.90" default-y="-179.68">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">begin</beam>
+      </note>
+      <note default-x="220.25" default-y="-174.68">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">end</beam>
+      </note>
+      <note default-x="241.61" default-y="-179.68">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+    </measure>
+    <measure number="19" width="299.74">
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="43.35" default-y="10.00">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">What</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">What</text>
+        </lyric>
+      </note>
+      <note default-x="76.59" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">forward hook</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">will</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">will</text>
+        </lyric>
+      </note>
+      <note default-x="97.36" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">it</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">it</text>
+        </lyric>
+      </note>
+      <note default-x="138.90" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">take</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">take</text>
+        </lyric>
+      </note>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="212.66" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">just</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">just</text>
+        </lyric>
+      </note>
+      <note default-x="245.90" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">to</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">for</text>
+        </lyric>
+      </note>
+      <note default-x="269.56" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <tie type="start" />
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">end</beam>
+        <notations>
+          <tied type="start" />
+        </notations>
+        <lyric number="1" default-x="6.58" default-y="-56.40" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">find</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-71.99" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">me</text>
+        </lyric>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="10.12" default-y="-164.68">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="10.12" default-y="-154.68">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="10.12" default-y="-144.68">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="76.59" default-y="-179.68">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="118.13" default-y="-174.68">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="118.13" default-y="-164.68">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="118.13" default-y="-154.68">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="212.66" default-y="-179.68">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note default-x="245.90" default-y="-174.68">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+    </measure>
+    <measure number="20" width="336.24">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>21.00</left-margin>
+            <right-margin>-0.00</right-margin>
+          </system-margins>
+          <system-distance>150.00</system-distance>
+        </system-layout>
+        <staff-layout number="2">
+          <staff-distance>88.37</staff-distance>
+        </staff-layout>
+      </print>
+      <note default-x="61.37" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <tie type="stop" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <note default-x="95.79" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">that</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-76.97" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">to</text>
+        </lyric>
+      </note>
+      <note default-x="130.22" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>begin</syllabic>
+          <text font-family="Hoefler Text" font-size="8">spe</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-76.97" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">have</text>
+        </lyric>
+      </note>
+      <note default-x="159.04" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>end</syllabic>
+          <text font-family="Hoefler Text" font-size="8">cial</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-76.97" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">it</text>
+        </lyric>
+      </note>
+      <note default-x="184.04" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">day</text>
+        </lyric>
+        <lyric number="2" default-x="6.58" default-y="-76.97" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">all</text>
+        </lyric>
+      </note>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note>
+        <rest />
+        <duration>16</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="61.37" default-y="-163.37">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="61.37" default-y="-148.37">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="61.37" default-y="-138.37">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="183.68" default-y="-168.37">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>32</duration>
+        <tie type="start" />
+        <voice>5</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <tied type="start" />
+        </notations>
+      </note>
+      <note default-x="183.68" default-y="-158.37">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>32</duration>
+        <tie type="start" />
+        <voice>5</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <tied type="start" />
+        </notations>
+      </note>
+      <note default-x="183.68" default-y="-148.37">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>32</duration>
+        <tie type="start" />
+        <voice>5</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <tied type="start" />
+        </notations>
+      </note>
+      <note default-x="300.21" default-y="-168.37">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <tie type="stop" />
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <note default-x="300.21" default-y="-158.37">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <tie type="stop" />
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <note default-x="300.21" default-y="-148.37">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <tie type="stop" />
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+    </measure>
+    <measure number="21" width="296.95">
+      <barline location="left">
+        <ending number="1" type="start" default-y="30.54" />
+      </barline>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="50.54" default-y="10.00">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">What</text>
+        </lyric>
+      </note>
+      <note default-x="83.97" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">forward hook</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">will</text>
+        </lyric>
+      </note>
+      <note default-x="104.86" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">it</text>
+        </lyric>
+      </note>
+      <note default-x="138.28" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">take</text>
+        </lyric>
+      </note>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="212.46" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">just</text>
+        </lyric>
+      </note>
+      <note default-x="245.88" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">begin</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">to</text>
+        </lyric>
+      </note>
+      <note default-x="266.77" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <tie type="start" />
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">end</beam>
+        <notations>
+          <tied type="start" />
+        </notations>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">find</text>
+        </lyric>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="13.80" default-y="-138.37">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>64</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note default-x="13.80" default-y="-128.37">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>64</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note default-x="13.80" default-y="-118.37">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>64</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="22" width="243.59">
+      <note default-x="16.76" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>32</duration>
+        <tie type="stop" />
+        <voice>1</voice>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <note>
+        <rest />
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <staff>1</staff>
+      </note>
+      <note default-x="114.46" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">that</text>
+        </lyric>
+      </note>
+      <note default-x="149.85" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">forward hook</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>begin</syllabic>
+          <text font-family="Hoefler Text" font-size="8">spe</text>
+        </lyric>
+      </note>
+      <note default-x="178.18" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>end</syllabic>
+          <text font-family="Hoefler Text" font-size="8">cial</text>
+        </lyric>
+      </note>
+      <note default-x="213.57" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>4</duration>
+        <tie type="start" />
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <tied type="start" />
+        </notations>
+        <lyric number="1" default-x="6.58" default-y="-61.38" relative-y="-14.17">
+          <syllabic>single</syllabic>
+          <text font-family="Hoefler Text" font-size="8">day</text>
+        </lyric>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="13.80" default-y="-133.37">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>64</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note default-x="13.80" default-y="-123.37">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>64</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note default-x="13.80" default-y="-113.37">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>64</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="23" width="338.67">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>21.00</left-margin>
+            <right-margin>-0.00</right-margin>
+          </system-margins>
+          <system-distance>150.00</system-distance>
+        </system-layout>
+        <staff-layout number="2">
+          <staff-distance>65.00</staff-distance>
+        </staff-layout>
+      </print>
+      <note default-x="61.01" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>32</duration>
+        <tie type="stop" />
+        <voice>1</voice>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <note>
+        <rest />
+        <duration>32</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>64</duration>
+      </backup>
+      <note default-x="61.37" default-y="-130.00">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note default-x="92.98" default-y="-110.00">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">forward hook</beam>
+      </note>
+      <note default-x="112.74" default-y="-95.00">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note default-x="144.34" default-y="-90.00">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">forward hook</beam>
+      </note>
+      <note default-x="167.61" default-y="-95.00">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note default-x="199.22" default-y="-140.00">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note default-x="230.83" default-y="-105.00">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">forward hook</beam>
+      </note>
+      <note default-x="250.58" default-y="-95.00">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note default-x="282.19" default-y="-90.00">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>4</duration>
+        <voice>5</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">begin</beam>
+        <beam number="2">forward hook</beam>
+      </note>
+      <note default-x="305.46" default-y="-95.00">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <beam number="1">end</beam>
+      </note>
+    </measure>
+  </part>
+</score-partwise>

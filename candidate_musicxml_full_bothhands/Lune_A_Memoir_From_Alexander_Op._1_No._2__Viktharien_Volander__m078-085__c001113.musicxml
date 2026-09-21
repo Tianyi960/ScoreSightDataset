@@ -1,0 +1,1067 @@
+<?xml version='1.0' encoding='utf-8'?>
+<score-partwise version="3.1">
+  <work>
+    <work-number>Op. 1, No. 2</work-number>
+    <work-title>Lune</work-title>
+  </work>
+  <identification>
+    <creator type="composer">Viktharien Volander</creator>
+    <encoding>
+      <software>MuseScore 3.6.2</software>
+      <encoding-date>2025-01-14</encoding-date>
+      <supports element="accidental" type="yes" />
+      <supports element="beam" type="yes" />
+      <supports element="print" attribute="new-page" type="yes" value="yes" />
+      <supports element="print" attribute="new-system" type="yes" value="yes" />
+      <supports element="stem" type="yes" />
+    </encoding>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>7.05556</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+    <page-layout>
+      <page-height>1584</page-height>
+      <page-width>1224</page-width>
+      <page-margins type="even">
+        <left-margin>56.6929</left-margin>
+        <right-margin>56.6929</right-margin>
+        <top-margin>56.6929</top-margin>
+        <bottom-margin>113.386</bottom-margin>
+      </page-margins>
+      <page-margins type="odd">
+        <left-margin>56.6929</left-margin>
+        <right-margin>56.6929</right-margin>
+        <top-margin>56.6929</top-margin>
+        <bottom-margin>113.386</bottom-margin>
+      </page-margins>
+    </page-layout>
+    <word-font font-family="FreeSerif" font-size="10" />
+    <lyric-font font-family="FreeSerif" font-size="11" />
+  </defaults>
+  <credit page="1">
+    <credit-type>title</credit-type>
+    <credit-words default-x="612" default-y="1528.63" justify="center" valign="top" font-size="24">Lune</credit-words>
+  </credit>
+  <credit page="1">
+    <credit-type>subtitle</credit-type>
+    <credit-words default-x="612" default-y="1503.39" justify="center" valign="top" font-size="14">"A Memoir From Alexander"
+</credit-words>
+    <credit-words>Op. 1, No. 2</credit-words>
+  </credit>
+  <credit page="1">
+    <credit-type>composer</credit-type>
+    <credit-words default-x="1167.31" default-y="1427.31" justify="right" valign="bottom" font-size="12">Viktharien Volander</credit-words>
+  </credit>
+  <credit page="1">
+    <credit-words default-x="56.6929" default-y="1527.31" justify="left" valign="top" font-style="italic" font-family="Gabriola" font-size="18">from series: "Three Lunes, Opus 1" </credit-words>
+  </credit>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Piano</part-name>
+      <part-abbreviation>Pno.</part-abbreviation>
+      <score-instrument id="P1-I1">
+        <instrument-name>Piano</instrument-name>
+      </score-instrument>
+      <midi-device id="P1-I1" port="1" />
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+        <volume>78.7402</volume>
+        <pan>0</pan>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <part id="P1">
+    <measure number="78" width="169.44">
+      <attributes>
+        <divisions>2</divisions>
+        <key>
+          <fifths>0</fifths>
+        </key>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+      </attributes>
+      <print new-page="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>21.00</left-margin>
+            <right-margin>-0.00</right-margin>
+          </system-margins>
+          <top-system-distance>70.00</top-system-distance>
+        </system-layout>
+        <staff-layout number="2">
+          <staff-distance>65.00</staff-distance>
+        </staff-layout>
+      </print>
+      <note default-x="102.78" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-44.08" default-y="5.51" />
+        </notations>
+      </note>
+      <note default-x="102.78" default-y="-15.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-44.08" default-y="5.51" />
+        </notations>
+      </note>
+      <note default-x="102.78" default-y="0.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-44.08" default-y="5.51" />
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <note default-x="105.74" default-y="-105.00">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <stem>down</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-35.84" default-y="15.45" />
+        </notations>
+      </note>
+      <note default-x="105.74" default-y="-95.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-35.84" default-y="15.45" />
+        </notations>
+      </note>
+      <note default-x="144.67" default-y="-120.00">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="144.67" default-y="-100.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="79" width="102.13">
+      <direction placement="above">
+        <direction-type>
+          <words default-y="46.00" relative-y="-35.00" font-style="italic" font-size="11">rit.</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="13.20" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>120</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="120" />
+      </direction>
+      <note default-x="35.04" default-y="-35.00">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-32.04" default-y="5.51" />
+        </notations>
+      </note>
+      <note default-x="35.04" default-y="-10.00">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-32.04" default-y="5.51" />
+        </notations>
+      </note>
+      <note default-x="35.04" default-y="0.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-32.04" default-y="5.51" />
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <note default-x="38.00" default-y="-140.00">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-18.53" default-y="-14.55" />
+        </notations>
+      </note>
+      <note default-x="38.00" default-y="-125.00">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-18.53" default-y="-14.55" />
+        </notations>
+      </note>
+      <note default-x="77.36" default-y="-140.00">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>108</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words relative-y="20.00" font-weight="bold" font-size="12">.8</words>
+        </direction-type>
+        <offset>-2</offset>
+        <staff>1</staff>
+        <sound tempo="108.8" />
+      </direction>
+    </measure>
+    <measure number="80" width="102.13">
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>105</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="105" />
+      </direction>
+      <note default-x="35.04" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-32.04" default-y="5.51" />
+        </notations>
+      </note>
+      <note default-x="35.04" default-y="-10.00">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-32.04" default-y="5.51" />
+        </notations>
+      </note>
+      <note default-x="35.04" default-y="0.00">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-32.04" default-y="5.51" />
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <note default-x="38.00" default-y="-140.00">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-18.53" default-y="-14.55" />
+        </notations>
+      </note>
+      <note default-x="38.00" default-y="-125.00">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-18.53" default-y="-14.55" />
+        </notations>
+      </note>
+      <note default-x="77.36" default-y="-140.00">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>93</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words relative-y="20.00" font-weight="bold" font-size="12">.8</words>
+        </direction-type>
+        <offset>-2</offset>
+        <staff>1</staff>
+        <sound tempo="93.8" />
+      </direction>
+    </measure>
+    <measure number="81" width="96.03">
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>90</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="90" />
+      </direction>
+      <note default-x="29.81" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-17.81" default-y="0.51" />
+        </notations>
+      </note>
+      <note default-x="29.81" default-y="-15.00">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-17.81" default-y="0.51" />
+        </notations>
+      </note>
+      <note default-x="29.81" default-y="-5.00">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-17.81" default-y="0.51" />
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <note default-x="32.77" default-y="-130.00">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <stem>down</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-17.81" default-y="-9.55" />
+        </notations>
+      </note>
+      <note default-x="32.77" default-y="-120.00">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <dot />
+        <stem>down</stem>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-17.81" default-y="-9.55" />
+        </notations>
+      </note>
+      <note default-x="71.27" default-y="-140.00">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="8.40" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>78</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="8.40" relative-y="20.00" font-weight="bold" font-size="12">.8</words>
+        </direction-type>
+        <offset>-2</offset>
+        <staff>1</staff>
+        <sound tempo="78.8" />
+      </direction>
+    </measure>
+    <measure number="82" width="84.60">
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="41.10" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>75</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="75" />
+      </direction>
+      <note default-x="38.84" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-35.84" default-y="20.51" />
+        </notations>
+      </note>
+      <note default-x="38.84" default-y="5.00">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-35.84" default-y="20.51" />
+        </notations>
+      </note>
+      <note default-x="38.84" default-y="15.00">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-35.84" default-y="20.51" />
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="start" line="yes" default-y="-85.75" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="38.84" default-y="-145.00">
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>2</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-38.68" default-y="0.51" />
+        </notations>
+      </note>
+      <note default-x="38.84" default-y="-125.00">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-38.68" default-y="0.51" />
+        </notations>
+      </note>
+      <note default-x="38.84" default-y="-110.00">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>8</duration>
+        <voice>5</voice>
+        <type>whole</type>
+        <accidental>sharp</accidental>
+        <staff>2</staff>
+        <notations>
+          <arpeggiate direction="up" default-x="-38.68" default-y="0.51" />
+        </notations>
+      </note>
+    </measure>
+    <measure number="83" width="129.46">
+      <direction placement="above">
+        <direction-type>
+          <words relative-x="3.04" relative-y="41.30" font-style="italic" font-size="11">a tempo</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="41.10" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>100</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="100" />
+      </direction>
+      <note default-x="15.80" default-y="20.00">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="41.10" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>101</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="41.10" relative-y="20.00" font-weight="bold" font-size="12">.7</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="101.7" />
+      </direction>
+      <note default-x="43.81" default-y="15.00">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="41.10" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>103</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="41.10" relative-y="20.00" font-weight="bold" font-size="12">.3</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="103.3" />
+      </direction>
+      <note default-x="71.83" default-y="10.00">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="27.80" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>105</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="105" />
+      </direction>
+      <note default-x="99.84" default-y="5.00">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <ornaments>
+            <inverted-mordent />
+          </ornaments>
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <note>
+        <rest measure="yes" />
+        <duration>8</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+      </note>
+    </measure>
+    <measure number="84" width="102.86">
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="15.80" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>106</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="15.80" relative-y="20.00" font-weight="bold" font-size="12">.7</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="106.7" />
+      </direction>
+      <note default-x="12.00" default-y="0.00">
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="15.80" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>108</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="15.80" relative-y="20.00" font-weight="bold" font-size="12">.3</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="108.3" />
+      </direction>
+      <note default-x="34.03" default-y="-5.00">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="15.80" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>110</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="110" />
+      </direction>
+      <note default-x="56.06" default-y="-10.00">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="15.80" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>111</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="15.80" relative-y="20.00" font-weight="bold" font-size="12">.7</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="111.7" />
+      </direction>
+      <note default-x="78.09" default-y="-15.00">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <ornaments>
+            <inverted-mordent />
+          </ornaments>
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <note>
+        <rest measure="yes" />
+        <duration>8</duration>
+        <voice>5</voice>
+        <staff>2</staff>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <pedal type="stop" line="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+    <measure number="85" width="119.94">
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="3.04" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>113</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="3.04" relative-y="20.00" font-weight="bold" font-size="12">.3</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="113.3" />
+      </direction>
+      <note default-x="12.00" default-y="-20.00">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="start" placement="above" number="1" />
+        </notations>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="3.04" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>115</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="115" />
+      </direction>
+      <note default-x="37.48" default-y="-25.00">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="3.04" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>116</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="3.04" relative-y="20.00" font-weight="bold" font-size="12">.7</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="116.7" />
+      </direction>
+      <note default-x="67.38" default-y="-30.00">
+        <pitch>
+          <step>G</step>
+          <alter>1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <accidental>sharp</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no" default-y="0.37" relative-y="20.00">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>118</per-minute>
+          </metronome>
+        </direction-type>
+        <direction-type>
+          <words default-y="0.37" relative-y="20.00" font-weight="bold" font-size="12">.3</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="118.3" />
+      </direction>
+      <note default-x="92.86" default-y="0.00">
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+        </notations>
+      </note>
+      <backup>
+        <duration>8</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <octave-shift type="up" size="8" number="1" default-y="-70.00" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <note default-x="12.00" default-y="-135.00">
+        <pitch>
+          <step>B</step>
+          <octave>1</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <slur type="start" placement="above" number="1" />
+        </notations>
+      </note>
+      <note default-x="37.48" default-y="-115.00">
+        <pitch>
+          <step>F</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="67.38" default-y="-115.00">
+        <pitch>
+          <step>F</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+      </note>
+      <note default-x="92.86" default-y="-120.00">
+        <pitch>
+          <step>E</step>
+          <octave>2</octave>
+        </pitch>
+        <duration>2</duration>
+        <voice>5</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>2</staff>
+        <notations>
+          <slur type="stop" number="1" />
+        </notations>
+      </note>
+      <direction placement="below">
+        <direction-type>
+          <octave-shift type="stop" size="8" number="1" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+    </measure>
+  </part>
+</score-partwise>
