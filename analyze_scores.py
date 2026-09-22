@@ -62,33 +62,55 @@ def load_score(file_path):
         return None, str(e)
 
 
-def get_note_sequence(part):
+def get_note_sequences(part):
     """
-    Extract single pitched notes in temporal order.
+    Extract single pitched notes in temporal order for each voice.
 
-    Chords are excluded completely from melodic leap calculation.
+    Chords are excluded completely from melodic leap calculation, and
+    notes from different voices are never compared with each other.
     """
-    events = []
+    sequences = {}
 
     for element in part.recurse().notes:
         if isinstance(element, note.Note):
-            events.append({
-                "offset": float(element.offset),
+            current_voice = element.getContextByClass(stream.Voice)
+
+            if current_voice is None:
+                voice_id = "default"
+            elif current_voice.id is not None:
+                voice_id = f"voice_{current_voice.id}"
+            else:
+                current_measure = current_voice.getContextByClass(
+                    stream.Measure
+                )
+                measure_voices = list(
+                    current_measure.getElementsByClass(stream.Voice)
+                )
+                voice_index = measure_voices.index(current_voice)
+                voice_id = f"voice_index_{voice_index}"
+
+            sequences.setdefault(voice_id, []).append({
+                "offset": float(element.getOffsetInHierarchy(part)),
                 "pitch": element.pitch,
                 "is_chord": False,
                 "chord_size": 1
             })
 
-    events.sort(key=lambda x: x["offset"])
-    return events
+    for events in sequences.values():
+        events.sort(key=lambda x: x["offset"])
+
+    return list(sequences.values())
 
 
-def count_large_leaps(events, threshold_semitones=7):
+def count_large_leaps(events, threshold_semitones=10):
     """
     Count melodic jumps.
 
     Default threshold:
-        7 semitones ≈ perfect fifth.
+        10 semitones = minor seventh.
+
+    This includes both minor sevenths (10 semitones), major sevenths
+    (11 semitones), octaves, and larger intervals.
 
     You can change this depending on how you define
     'large leap' in ScoreSight.
@@ -314,7 +336,7 @@ def meets_filter_criteria(row):
     )
 
 
-def analyze_score(file_path, large_leap_threshold=5):
+def analyze_score(file_path, large_leap_threshold=10):
     row = {
         "filename": os.path.basename(file_path),
         "filepath": str(file_path),
@@ -452,17 +474,18 @@ def analyze_score(file_path, large_leap_threshold=5):
     all_leap_sizes = []
 
     for part in parts:
-        events = get_note_sequence(part)
+        note_sequences = get_note_sequences(part)
 
-        total_events += max(0, len(events) - 1)
+        for events in note_sequences:
+            total_events += max(0, len(events) - 1)
 
-        leap_count, leap_sizes = count_large_leaps(
-            events,
-            threshold_semitones=large_leap_threshold
-        )
+            leap_count, leap_sizes = count_large_leaps(
+                events,
+                threshold_semitones=large_leap_threshold
+            )
 
-        total_large_leaps += leap_count
-        all_leap_sizes.extend(leap_sizes)
+            total_large_leaps += leap_count
+            all_leap_sizes.extend(leap_sizes)
 
     row["num_large_leaps"] = total_large_leaps
 
@@ -503,7 +526,7 @@ def analyze_score(file_path, large_leap_threshold=5):
 def analyze_folder(
     input_folder,
     output_csv="scoresight_musicxml_analysis.csv",
-    large_leap_threshold=5
+    large_leap_threshold=10
 ):
     files = []
 
@@ -566,5 +589,5 @@ if __name__ == "__main__":
     analyze_folder(
         INPUT_FOLDER,
         OUTPUT_CSV,
-        large_leap_threshold=7
+        large_leap_threshold=10
     )

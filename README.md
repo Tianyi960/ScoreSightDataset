@@ -7,6 +7,9 @@ The workflow has two stages:
 1. `analyze_scores.py` analyzes and filters the MusicXML files, then writes the selected scores to a CSV file.
 2. `export_previews.py` reads the selected scores from the CSV and uses MuseScore to export their first-page previews.
 
+An additional utility, `find_similar_candidates.py`, selects the most
+internally similar group of 10 scores from the `Candidate` folder.
+
 ## Project Structure
 
 ```text
@@ -19,6 +22,8 @@ ScoreSightDataset/
 └── previews/
     └── selected/
         ├── *_preview.png
+        ├── musicxml/
+        │   └── Selected source MusicXML files
         └── preview_export_log.csv
 ```
 
@@ -112,15 +117,21 @@ The `note_density <= 5` condition is currently commented out. Note density is st
 
 ### Large Leaps
 
-The current entry point uses a large-leap threshold of seven semitones:
+The current entry point treats a diatonic seventh or larger as a large
+leap. Because a seventh may be either 10 or 11 semitones, the threshold
+is set to 10 semitones so that both minor and major sevenths are included:
 
 ```python
-large_leap_threshold=7
+large_leap_threshold=10
 ```
 
 Large leaps are calculated as follows:
 
 - The two hands are analyzed separately and their results are combined.
+- Notes are ordered using their global offsets within the part, so notes
+  from different measures remain in the correct chronological order.
+- Each explicit MusicXML voice is analyzed separately; notes from different
+  voices are never compared with each other.
 - Only individual `note.Note` events are used.
 - `chord.Chord` events are completely excluded from the calculation.
 - If a chord occurs between two individual notes, the chord is skipped and the two individual notes are compared directly.
@@ -176,21 +187,52 @@ The script performs the following steps:
 3. Calls MuseScore to export each score as PNG.
 4. Keeps only the first page of each score.
 5. Renames each output to `original_filename_preview.png`.
-6. Writes `preview_export_log.csv` with the success status and any error for each file.
+6. Copies the source score for every successful preview to `previews\selected\musicxml`.
+7. Writes `preview_export_log.csv` with the preview path, copied MusicXML path, success status, and any error for each file.
 
-The preview loop currently uses `files[:100]`, so it exports at most the first 100 scores from the CSV in one run. To export every selected score, change:
+The preview script uses `BATCH_START` and `BATCH_END` to select a batch of
+CSV rows. The current values export Python indices 100–199, which are rows
+101–200 when counted normally:
 
 ```python
-for i, score_file in enumerate(files[:100], start=1):
+BATCH_START = 100
+BATCH_END = 200
 ```
 
-to:
+To export the next batch, use `200` and `300`. To export every selected score,
+replace the batch slice with the complete `files` list.
+
+The active slice is:
 
 ```python
-for i, score_file in enumerate(files, start=1):
+batch_files = files[BATCH_START:BATCH_END]
 ```
 
 Each preview run clears the previous contents of `previews\selected` before exporting. If the process is interrupted, the directory may contain only a partial set of previews. Run the script again to rebuild it.
+
+## Finding the 10 Most Similar Candidate Scores
+
+Run:
+
+```powershell
+python find_similar_candidates.py
+```
+
+The script analyzes every score in `Candidate`, standardizes note density,
+right- and left-hand single-note counts, large-leap measurements, and chord
+measurements, then checks every possible 10-score group. It selects the group
+with the smallest average pairwise distance and writes:
+
+```text
+candidate_top10_similar.csv
+```
+
+The output uses exactly the same columns and column order as
+`scoresight_musicxml_analysis.csv`.
+
+The script also creates `candidate_similarity_plot.png`, containing a PCA
+similarity map for all 17 candidates and a standardized-feature heatmap for
+the selected top 10.
 
 ## Path Configuration
 
@@ -230,7 +272,7 @@ Confirm that MuseScore 4 is installed and that `MUSESCORE_EXE` in `export_previe
 
 Possible causes include:
 
-- The preview script currently processes only the first 100 CSV rows.
+- The requested score may be outside the currently configured 100-file batch.
 - The export process was interrupted.
 - MuseScore failed to export one or more files.
 

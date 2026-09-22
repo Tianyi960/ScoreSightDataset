@@ -20,6 +20,13 @@ INPUT_FOLDER = Path(
 OUTPUT_FOLDER = Path(
     r"C:\Users\86138\Desktop\ScoreSightDataset\previews\selected")
 
+# 保存成功生成预览的原始 MusicXML
+MUSICXML_OUTPUT_FOLDER = OUTPUT_FOLDER / "musicxml"
+
+# 当前导出批次：Python 索引 100–199，即 CSV 中第 101–200 首
+BATCH_START = 100
+BATCH_END = 200
+
 # MuseScore 可执行文件路径
 # 你需要根据自己电脑实际安装位置修改
 MUSESCORE_EXE = Path(r"C:\Program Files\MuseScore 4\bin\MuseScore4.exe")
@@ -85,6 +92,17 @@ def clear_output_folder(output_folder: Path):
             path.unlink()
         elif path.is_dir():
             shutil.rmtree(path)
+
+
+def copy_score_file(score_file: Path, input_root: Path, output_root: Path):
+    """
+    将成功生成预览的原始谱子复制到单独的 MusicXML 文件夹。
+    """
+    relative_path = score_file.relative_to(input_root)
+    destination = output_root / relative_path
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(score_file, destination)
+    return destination
 
 
 def export_first_page(score_file: Path, input_root: Path, output_root: Path, musescore_exe: Path):
@@ -206,16 +224,24 @@ def main():
 
     print(f"Found {len(files)} selected score files in the analysis CSV.")
 
+    batch_files = files[BATCH_START:BATCH_END]
+    print(
+        f"Exporting CSV rows {BATCH_START + 1}–{BATCH_END} "
+        f"({len(batch_files)} files)."
+    )
+
     clear_output_folder(OUTPUT_FOLDER)
     print(f"Cleared previous preview files: {OUTPUT_FOLDER}")
+    MUSICXML_OUTPUT_FOLDER.mkdir(parents=True, exist_ok=True)
 
     log_rows = []
 
-    for i, score_file in enumerate(files[:100], start=1):
-        print(f"[{i}/{len(files)}] Exporting preview: {score_file.name}")
+    for i, score_file in enumerate(batch_files, start=1):
+        print(f"[{i}/{len(batch_files)}] Exporting preview: {score_file.name}")
 
         if not score_file.exists():
             preview_path = None
+            musicxml_path = None
             error = "Score file not found"
         else:
             preview_path, error = export_first_page(
@@ -225,9 +251,22 @@ def main():
                 musescore_exe=MUSESCORE_EXE
             )
 
+            musicxml_path = None
+
+            if error is None:
+                try:
+                    musicxml_path = copy_score_file(
+                        score_file=score_file,
+                        input_root=INPUT_FOLDER,
+                        output_root=MUSICXML_OUTPUT_FOLDER
+                    )
+                except Exception as e:
+                    error = f"Preview exported, but MusicXML copy failed: {e}"
+
         log_rows.append({
             "input_file": str(score_file),
             "preview_file": str(preview_path) if preview_path else "",
+            "musicxml_file": str(musicxml_path) if musicxml_path else "",
             "success": error is None,
             "error": error or ""
         })
@@ -236,7 +275,13 @@ def main():
     with open(log_csv, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(
             f,
-            fieldnames=["input_file", "preview_file", "success", "error"]
+            fieldnames=[
+                "input_file",
+                "preview_file",
+                "musicxml_file",
+                "success",
+                "error"
+            ]
         )
         writer.writeheader()
         writer.writerows(log_rows)
@@ -244,9 +289,12 @@ def main():
     print()
     print("Done.")
     print(f"Total selected scores: {len(files)}")
-    print(f"Previews exported: {sum(row['success'] for row in log_rows)}")
+    print(f"Files attempted in this batch: {len(batch_files)}")
+    print(f"Previews exported: {sum(bool(row['preview_file']) for row in log_rows)}")
+    print(f"MusicXML files copied: {sum(bool(row['musicxml_file']) for row in log_rows)}")
     print(f"Export failures: {sum(not row['success'] for row in log_rows)}")
     print(f"Preview folder: {OUTPUT_FOLDER}")
+    print(f"MusicXML folder: {MUSICXML_OUTPUT_FOLDER}")
     print(f"Log file: {log_csv}")
 
 
