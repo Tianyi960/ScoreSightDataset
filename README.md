@@ -9,6 +9,8 @@ The workflow has two stages:
 
 An additional utility, `find_similar_candidates.py`, selects the most
 internally similar group of 10 scores from the `Candidate` folder.
+`export_candidate_previews.py` exports first-page PNG previews for every
+score in that folder.
 
 ## Project Structure
 
@@ -233,6 +235,18 @@ The output uses exactly the same columns and column order as
 The script also creates `candidate_similarity_plot.png`, containing a PCA
 similarity map for all 17 candidates and a standardized-feature heatmap for
 the selected top 10.
+
+## Exporting All Candidate Previews
+
+Run:
+
+```powershell
+python export_candidate_previews.py
+```
+
+The script clears and rebuilds `candidate_previews`, exports the first page
+of every score in `Candidate`, and writes
+`candidate_preview_export_log.csv`.
 
 ## Path Configuration
 

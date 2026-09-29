@@ -1,593 +1,515 @@
-import os
 import csv
-import zipfile
-import tempfile
+import os
+import re
+from collections import defaultdict
 from pathlib import Path
-from collections import Counter
 
-from music21 import converter, chord, note, stream, interval, key, meter, tempo
+from music21 import chord, clef, converter, key, meter, note, stream
 
 
 SUPPORTED_EXTENSIONS = {".musicxml", ".xml", ".mxl"}
+INPUT_FOLDER = "./candidate_musicxml_full_bothhands"
+OUTPUT_CSV = "all_scores_feature_analysis.csv"
+LARGE_LEAP_THRESHOLD = 10
+ONSET_PRECISION = 6
 
-CSV_FIELDNAMES = [
-    "filename",
-    "filepath",
-    "parse_success",
-    "error",
-    "title",
-    "composer",
-    "num_parts",
-    "num_measures",
-    "actual_measures",
-    "num_notes",
-    "num_chords",
-    "num_rest",
-    "num_accidentals",
-    "accidental_ratio",
-    "pitch_min",
-    "pitch_max",
-    "pitch_range_semitones",
-    "num_large_leaps",
-    "large_leap_ratio",
-    "max_large_leap_semitones",
-    "max_polyphony",
-    "duration_quarter_lengths",
-    "note_density",
-    "chord_ratio",
-    "tempo_bpm",
-    "time_signatures",
-    "key_signature_sharps",
-    "no_key_signature",
-    "right_hand_single_notes",
-    "right_hand_chords",
-    "left_hand_single_notes",
-    "left_hand_chords",
-    "left_hand_melody_range_semitones",
-    "left_hand_is_melody",
-    "selected"
+BASE_FIELDS = [
+    "file_name", "title", "composer", "num_parts", "num_measures",
+    "time_signature", "key_signature", "total_duration", "parse_success",
+    "parse_error", "analysis_error", "hand_assignment_method",
 ]
 
+HAND_FEATURE_NAMES = [
+    "note_count", "note_density", "chord_ratio", "avg_chord_size",
+    "accidental_ratio", "pitch_range", "large_leap_count",
+    "large_leap_ratio", "max_leap", "rest_ratio", "rhythm_variety",
+    "short_note_ratio", "max_polyphony",
+]
 
-def load_score(file_path):
-    """
-    Load MusicXML / MXL file using music21.
-    Returns:
-        score, error_message
-    """
+CSV_FIELDNAMES = (
+    BASE_FIELDS
+    + [f"RH_{name}" for name in HAND_FEATURE_NAMES]
+    + [f"LH_{name}" for name in HAND_FEATURE_NAMES]
+    + [
+        "both_onset_ratio", "RH_LH_density_difference",
+        "rhythm_mismatch_ratio", "total_note_density",
+    ]
+)
+
+
+def parse_score(file_path):
+    """Parse one MusicXML file without allowing an error to stop the batch."""
     try:
-        score = converter.parse(file_path)
-        return score, None
-    except Exception as e:
-        return None, str(e)
+        return converter.parse(file_path), None
+    except Exception as exc:
+        return None, str(exc)
 
 
-def get_note_sequences(part):
-    """
-    Extract single pitched notes in temporal order for each voice.
-
-    Chords are excluded completely from melodic leap calculation, and
-    notes from different voices are never compared with each other.
-    """
-    sequences = {}
-
-    for element in part.recurse().notes:
-        if isinstance(element, note.Note):
-            current_voice = element.getContextByClass(stream.Voice)
-
-            if current_voice is None:
-                voice_id = "default"
-            elif current_voice.id is not None:
-                voice_id = f"voice_{current_voice.id}"
-            else:
-                current_measure = current_voice.getContextByClass(
-                    stream.Measure
-                )
-                measure_voices = list(
-                    current_measure.getElementsByClass(stream.Voice)
-                )
-                voice_index = measure_voices.index(current_voice)
-                voice_id = f"voice_index_{voice_index}"
-
-            sequences.setdefault(voice_id, []).append({
-                "offset": float(element.getOffsetInHierarchy(part)),
-                "pitch": element.pitch,
-                "is_chord": False,
-                "chord_size": 1
-            })
-
-    for events in sequences.values():
-        events.sort(key=lambda x: x["offset"])
-
-    return list(sequences.values())
+def _normalized_text(value):
+    return re.sub(r"[^a-z0-9]+", " ", str(value or "").lower()).strip()
 
 
-def count_large_leaps(events, threshold_semitones=10):
-    """
-    Count melodic jumps.
-
-    Default threshold:
-        10 semitones = minor seventh.
-
-    This includes both minor sevenths (10 semitones), major sevenths
-    (11 semitones), octaves, and larger intervals.
-
-    You can change this depending on how you define
-    'large leap' in ScoreSight.
-    """
-    leap_count = 0
-    leap_sizes = []
-
-    for i in range(1, len(events)):
-        p1 = events[i - 1]["pitch"]
-        p2 = events[i]["pitch"]
-
-        semitones = abs(p2.midi - p1.midi)
-
-        if semitones >= threshold_semitones:
-            leap_count += 1
-            leap_sizes.append(semitones)
-
-    return leap_count, leap_sizes
-
-
-def calculate_polyphony(score):
-    """
-    Rough estimate of maximum simultaneous notes.
-
-    This is intentionally simple:
-    count notes/chord tones starting at same offset.
-    """
-    offset_counter = Counter()
-
-    for element in score.recurse().notes:
-        global_offset = float(element.getOffsetInHierarchy(score))
-
-        if isinstance(element, note.Note):
-            offset_counter[global_offset] += 1
-
-        elif isinstance(element, chord.Chord):
-            offset_counter[global_offset] += len(element.pitches)
-
-    if not offset_counter:
-        return 0
-
-    return max(offset_counter.values())
-
-
-def get_pitch_range(score):
-    pitches = []
-
-    for element in score.recurse().notes:
-        if isinstance(element, note.Note):
-            pitches.append(element.pitch)
-
-        elif isinstance(element, chord.Chord):
-            pitches.extend(element.pitches)
-
-    if not pitches:
-        return None, None, 0
-
-    min_pitch = min(pitches)
-    max_pitch = max(pitches)
-
-    semitone_range = max_pitch.midi - min_pitch.midi
-
-    return min_pitch.nameWithOctave, max_pitch.nameWithOctave, semitone_range
-
-
-def estimate_duration(score):
-    """
-    Estimate score duration in quarter lengths.
-
-    This is not real seconds unless tempo is known.
-    """
+def _part_label(part):
+    labels = [getattr(part, "partName", None), getattr(part, "id", None)]
     try:
-        return float(score.highestTime)
+        instrument = part.getInstrument(returnDefault=False)
     except Exception:
-        return 0
+        instrument = None
+    if instrument is not None:
+        labels.extend([
+            getattr(instrument, "instrumentName", None),
+            getattr(instrument, "partName", None),
+        ])
+    return _normalized_text(" ".join(str(label) for label in labels if label))
 
 
-def get_tempo(score):
-    """
-    Return first detected metronome mark.
-    """
-    tempos = list(score.recurse().getElementsByClass(tempo.MetronomeMark))
-
-    for t in tempos:
-        if t.number is not None:
-            return float(t.number)
-
+def _named_hand(label):
+    tokens = set(label.split())
+    if (
+        "right" in tokens or "rh" in tokens or "upper" in tokens
+        or "treble" in tokens or "staff 1" in label
+    ):
+        return "RH"
+    if (
+        "left" in tokens or "lh" in tokens or "lower" in tokens
+        or "bass" in tokens or "staff 2" in label
+    ):
+        return "LH"
     return None
 
 
-def get_time_signatures(score):
-    signatures = []
-
-    for ts in score.recurse().getElementsByClass(meter.TimeSignature):
-        signatures.append(ts.ratioString)
-
-    return ",".join(sorted(set(signatures)))
-
-
-def get_initial_key_signature(parts):
-    """
-    Return the initial key signature's number of sharps/flats.
-
-    An absent key signature is treated as zero. If the piano staves have
-    different initial signatures, return the first non-zero value so the
-    score is not classified as having no key signature.
-    """
-    initial_sharps = []
-
-    for part in parts:
-        for ks in part.recurse().getElementsByClass(key.KeySignature):
-            try:
-                offset = float(ks.getOffsetInHierarchy(part))
-            except Exception:
-                offset = float(ks.offset)
-
-            if abs(offset) < 1e-9:
-                initial_sharps.append(int(ks.sharps or 0))
-
-    for sharps in initial_sharps:
-        if sharps != 0:
-            return sharps
-
-    return 0
+def _first_clef_role(part):
+    try:
+        clefs = list(part.recurse().getElementsByClass(clef.Clef))
+    except Exception:
+        return None
+    if not clefs:
+        return None
+    sign = getattr(clefs[0], "sign", None)
+    if sign == "G":
+        return "RH"
+    if sign == "F":
+        return "LH"
+    return None
 
 
-def get_hand_melody_metrics(parts):
-    """
-    Estimate whether the lower-pitched piano part carries the melody.
+def _average_pitch(part):
+    midi_values = []
+    for element in part.recurse().notes:
+        if isinstance(element, note.Note):
+            midi_values.append(element.pitch.midi)
+        elif isinstance(element, chord.Chord):
+            midi_values.extend(pitch.midi for pitch in element.pitches)
+    if not midi_values:
+        return None
+    return sum(midi_values) / len(midi_values)
 
-    The higher-pitched part is treated as the right hand and the
-    lower-pitched part as the left hand. A left-hand melody is flagged
-    conservatively when the right hand is chord-dominant, the left hand
-    has more single-note events, and its melodic range is at least one octave.
-    """
-    empty_metrics = {
-        "right_hand_single_notes": 0,
-        "right_hand_chords": 0,
-        "left_hand_single_notes": 0,
-        "left_hand_chords": 0,
-        "left_hand_melody_range_semitones": 0,
-        "left_hand_is_melody": False
-    }
 
-    if len(parts) != 2:
-        return empty_metrics
+def _staff_number(part):
+    """Return an explicit staff number encoded in a PartStaff/id, if present."""
+    class_name = part.__class__.__name__.lower()
+    label = _part_label(part)
+    match = re.search(r"(?:staff|stave)\s*([12])(?:\b|$)", label)
+    if match:
+        return int(match.group(1))
+    if class_name == "partstaff":
+        # music21 preserves grand-staff order in Score.parts. The caller may
+        # therefore use order when both objects are explicitly PartStaff.
+        return 0
+    return None
 
-    part_metrics = []
 
-    for part in parts:
-        single_notes = list(
-            part.recurse().getElementsByClass(note.Note)
-        )
-        chords = list(
-            part.recurse().getElementsByClass(chord.Chord)
-        )
+def identify_hands(score):
+    """Return (RH parts, LH parts, assignment method), in priority order."""
+    parts = list(score.parts)
+    if len(parts) < 2:
+        return None, None, "unreliable"
 
-        all_pitches = [n.pitch.midi for n in single_notes]
-
-        for current_chord in chords:
-            all_pitches.extend(
-                pitch.midi for pitch in current_chord.pitches
+    staff_numbers = [_staff_number(part) for part in parts]
+    if len(parts) == 2:
+        if set(staff_numbers) == {1, 2}:
+            return (
+                [parts[staff_numbers.index(1)]],
+                [parts[staff_numbers.index(2)]],
+                "staff_structure",
             )
+        if all(number == 0 for number in staff_numbers):
+            return [parts[0]], [parts[1]], "staff_structure"
 
-        average_pitch = (
-            sum(all_pitches) / len(all_pitches)
-            if all_pitches
-            else 0
-        )
+    named_roles = [_named_hand(_part_label(part)) for part in parts]
+    rh_named = [part for part, role in zip(parts, named_roles) if role == "RH"]
+    lh_named = [part for part, role in zip(parts, named_roles) if role == "LH"]
+    if len(rh_named) == 1 and len(lh_named) == 1 and rh_named[0] is not lh_named[0]:
+        return rh_named, lh_named, "part_name"
 
-        single_note_pitches = [n.pitch.midi for n in single_notes]
-        single_note_range = (
-            max(single_note_pitches) - min(single_note_pitches)
-            if single_note_pitches
-            else 0
-        )
+    if len(parts) == 2:
+        clef_roles = [_first_clef_role(part) for part in parts]
+        if clef_roles == ["RH", "LH"]:
+            return [parts[0]], [parts[1]], "clef"
+        if clef_roles == ["LH", "RH"]:
+            return [parts[1]], [parts[0]], "clef"
 
-        part_metrics.append({
-            "single_notes": len(single_notes),
-            "chords": len(chords),
-            "average_pitch": average_pitch,
-            "single_note_range": single_note_range
-        })
+        averages = [_average_pitch(part) for part in parts]
+        if None not in averages and abs(averages[0] - averages[1]) >= 1.0:
+            if averages[0] > averages[1]:
+                return [parts[0]], [parts[1]], "average_pitch_fallback"
+            return [parts[1]], [parts[0]], "average_pitch_fallback"
 
-    part_metrics.sort(
-        key=lambda metrics: metrics["average_pitch"],
-        reverse=True
+    return None, None, "unreliable"
+
+
+def _voice_key(element, source, source_index):
+    current_voice = element.getContextByClass(stream.Voice)
+    if current_voice is None:
+        return (source_index, "default")
+    if current_voice.id is not None:
+        return (source_index, f"voice_{current_voice.id}")
+
+    current_measure = current_voice.getContextByClass(stream.Measure)
+    if current_measure is not None:
+        voices = list(current_measure.getElementsByClass(stream.Voice))
+        try:
+            return (source_index, f"voice_index_{voices.index(current_voice)}")
+        except ValueError:
+            pass
+    return (source_index, "unnamed_voice")
+
+
+def extract_hand_events(hand_sources):
+    """Extract positioned note/chord/rest events for one hand."""
+    events = []
+    for source_index, source in enumerate(hand_sources):
+        for element in source.recurse().notesAndRests:
+            if not isinstance(element, (note.Note, chord.Chord, note.Rest)):
+                continue
+            try:
+                onset = float(element.getOffsetInHierarchy(source))
+                duration = float(element.duration.quarterLength)
+            except (TypeError, ValueError, AttributeError):
+                continue
+
+            if isinstance(element, note.Note):
+                pitches = [element.pitch]
+                event_type = "note"
+            elif isinstance(element, chord.Chord):
+                pitches = list(element.pitches)
+                event_type = "chord"
+            else:
+                pitches = []
+                event_type = "rest"
+
+            events.append({
+                "onset": onset,
+                "duration": duration,
+                "end": onset + duration,
+                "pitches": pitches,
+                "type": event_type,
+                "voice": _voice_key(element, source, source_index),
+            })
+    events.sort(key=lambda event: (event["onset"], event["type"], event["duration"]))
+    return events
+
+
+def calculate_max_polyphony(events):
+    """Calculate maximum simultaneously sounding pitches using time spans."""
+    changes = []
+    for event in events:
+        if not event["pitches"] or event["duration"] <= 0:
+            continue
+        pitch_count = len(event["pitches"])
+        changes.append((event["onset"], 1, pitch_count))
+        changes.append((event["end"], 0, -pitch_count))
+
+    # Endings sort before starts at the same time, so adjacent notes do not overlap.
+    changes.sort(key=lambda item: (item[0], item[1]))
+    sounding = 0
+    maximum = 0
+    for _, _, delta in changes:
+        sounding += delta
+        maximum = max(maximum, sounding)
+    return maximum
+
+
+def calculate_sounding_union_duration(events):
+    """Return the union length of all sounding note/chord time intervals.
+
+    Each note or chord event contributes one interval regardless of chord size.
+    Overlapping and adjacent intervals are merged, which prevents rests or
+    sounding time in multiple voices from being counted more than once.
+    """
+    intervals = sorted(
+        (event["onset"], event["end"])
+        for event in events
+        if event["pitches"] and event["duration"] > 0
+    )
+    if not intervals:
+        return 0.0
+
+    merged_duration = 0.0
+    current_start, current_end = intervals[0]
+    tolerance = 10 ** (-ONSET_PRECISION)
+
+    for start, end in intervals[1:]:
+        if start <= current_end + tolerance:
+            current_end = max(current_end, end)
+        else:
+            merged_duration += current_end - current_start
+            current_start, current_end = start, end
+
+    merged_duration += current_end - current_start
+    return merged_duration
+
+
+def _explicit_accidental_count(pitches):
+    return sum(
+        1 for pitch in pitches
+        if pitch.accidental is not None and pitch.accidental.displayStatus is True
     )
 
-    right_hand = part_metrics[0]
-    left_hand = part_metrics[1]
 
-    left_hand_is_melody = (
-        right_hand["chords"] > right_hand["single_notes"]
-        and left_hand["single_notes"] > right_hand["single_notes"]
-        and left_hand["single_note_range"] >= 12
-    )
+def _melodic_intervals(events):
+    by_voice = defaultdict(list)
+    for event in events:
+        if event["type"] == "note" and len(event["pitches"]) == 1:
+            by_voice[event["voice"]].append(event)
 
-    return {
-        "right_hand_single_notes": right_hand["single_notes"],
-        "right_hand_chords": right_hand["chords"],
-        "left_hand_single_notes": left_hand["single_notes"],
-        "left_hand_chords": left_hand["chords"],
-        "left_hand_melody_range_semitones": left_hand["single_note_range"],
-        "left_hand_is_melody": left_hand_is_melody
+    intervals = []
+    for voice_events in by_voice.values():
+        voice_events.sort(key=lambda event: event["onset"])
+        for previous, current in zip(voice_events, voice_events[1:]):
+            intervals.append(abs(
+                current["pitches"][0].midi - previous["pitches"][0].midi
+            ))
+    return intervals
+
+
+def extract_hand_features(events, total_duration, prefix):
+    musical_events = [event for event in events if event["type"] != "rest"]
+    chord_events = [event for event in musical_events if event["type"] == "chord"]
+    pitches = [pitch for event in musical_events for pitch in event["pitches"]]
+
+    note_count = len(pitches)
+    event_count = len(musical_events)
+    intervals = _melodic_intervals(events)
+    large_leaps = [size for size in intervals if size >= LARGE_LEAP_THRESHOLD]
+
+    values = {
+        "note_count": note_count,
+        "note_density": note_count / total_duration if total_duration > 0 else None,
+        "chord_ratio": len(chord_events) / event_count if event_count else None,
+        "avg_chord_size": (
+            sum(len(event["pitches"]) for event in chord_events) / len(chord_events)
+            if chord_events else 0
+        ),
+        "accidental_ratio": (
+            _explicit_accidental_count(pitches) / note_count if note_count else None
+        ),
+        "pitch_range": (
+            max(pitch.midi for pitch in pitches) - min(pitch.midi for pitch in pitches)
+            if pitches else None
+        ),
+        "large_leap_count": len(large_leaps),
+        "large_leap_ratio": len(large_leaps) / len(intervals) if intervals else None,
+        "max_leap": max(intervals) if intervals else None,
+        "rest_ratio": (
+            max(
+                0.0,
+                total_duration - calculate_sounding_union_duration(musical_events),
+            )
+            / total_duration
+            if total_duration > 0 else None
+        ),
+        "rhythm_variety": len({
+            round(event["duration"], ONSET_PRECISION) for event in musical_events
+        }),
+        "short_note_ratio": (
+            sum(event["duration"] <= 0.5 for event in musical_events) / event_count
+            if event_count else None
+        ),
+        "max_polyphony": calculate_max_polyphony(musical_events),
     }
+    return {f"{prefix}_{name}": value for name, value in values.items()}
 
 
-def meets_filter_criteria(row):
-    return (
-        row["parse_success"] is True
-        and row["num_parts"] == 2
-        and row["no_key_signature"] is True
-        and row["left_hand_is_melody"] is False
-        and 8 <= row["actual_measures"] <= 64
-        and row["num_notes"] >= 30
-        and row["max_polyphony"] <= 6
-        # and row["note_density"] <= 5
-        and 1 <= row["num_chords"] <= 10
-        and row["accidental_ratio"] <= 0.10
-        and row["num_large_leaps"] >= 1
-        and row["large_leap_ratio"] <= 0.35
+def _onset_duration_map(events):
+    result = defaultdict(set)
+    for event in events:
+        if event["type"] == "rest":
+            continue
+        onset = round(event["onset"], ONSET_PRECISION)
+        duration = round(event["duration"], ONSET_PRECISION)
+        result[onset].add(duration)
+    return result
+
+
+def calculate_both_onset_ratio(rh_events, lh_events):
+    rh_onsets = set(_onset_duration_map(rh_events))
+    lh_onsets = set(_onset_duration_map(lh_events))
+    all_onsets = rh_onsets | lh_onsets
+    if not all_onsets:
+        return None
+    return len(rh_onsets & lh_onsets) / len(all_onsets)
+
+
+def calculate_rhythm_mismatch_ratio(rh_events, lh_events):
+    """Compare complete duration sets at shared onsets, supporting multiple voices."""
+    rh_durations = _onset_duration_map(rh_events)
+    lh_durations = _onset_duration_map(lh_events)
+    simultaneous = set(rh_durations) & set(lh_durations)
+    if not simultaneous:
+        return None
+    mismatches = sum(
+        rh_durations[onset] != lh_durations[onset] for onset in simultaneous
     )
+    return mismatches / len(simultaneous)
 
 
-def analyze_score(file_path, large_leap_threshold=10):
-    row = {
-        "filename": os.path.basename(file_path),
-        "filepath": str(file_path),
+def _initial_element(score, element_class):
+    candidates = []
+    for part_index, part in enumerate(score.parts):
+        for element in part.recurse().getElementsByClass(element_class):
+            try:
+                offset = float(element.getOffsetInHierarchy(part))
+            except (TypeError, ValueError, AttributeError):
+                offset = float(getattr(element, "offset", 0))
+            candidates.append((offset, part_index, element))
+    if not candidates:
+        return None
+    return min(candidates, key=lambda item: (item[0], item[1]))[2]
 
+
+def _empty_row(file_path):
+    return {field: None for field in CSV_FIELDNAMES} | {
+        "file_name": Path(file_path).name,
         "parse_success": False,
-        "error": "",
-
-        "title": "",
-        "composer": "",
-
-        "num_parts": 0,
-        "num_measures": 0,
-        "actual_measures": 0,
-        "num_notes": 0,
-        "num_chords": 0,
-        "num_rest": 0,
-        "num_accidentals": 0,
-        "accidental_ratio": 0,
-
-        "pitch_min": "",
-        "pitch_max": "",
-        "pitch_range_semitones": 0,
-
-        "num_large_leaps": 0,
-        "large_leap_ratio": 0,
-        "max_large_leap_semitones": 0,
-
-        "max_polyphony": 0,
-
-        "duration_quarter_lengths": 0,
-        "note_density": 0,
-        "chord_ratio": 0,
-        "tempo_bpm": "",
-        "time_signatures": "",
-
-        "key_signature_sharps": 0,
-        "no_key_signature": True,
-
-        "right_hand_single_notes": 0,
-        "right_hand_chords": 0,
-        "left_hand_single_notes": 0,
-        "left_hand_chords": 0,
-        "left_hand_melody_range_semitones": 0,
-        "left_hand_is_melody": False,
-
-        "selected": ""
+        "parse_error": "",
+        "analysis_error": "",
+        "hand_assignment_method": "unreliable",
     }
 
-    score, error = load_score(file_path)
 
+def _analyze_score(file_path):
+    row = _empty_row(file_path)
+    score, error = parse_score(file_path)
     if score is None:
-        row["error"] = error
+        row["parse_error"] = error
         return row
 
     row["parse_success"] = True
-
-    # Metadata
-    if score.metadata:
-        row["title"] = score.metadata.title or ""
-        row["composer"] = score.metadata.composer or ""
+    metadata = getattr(score, "metadata", None)
+    row["title"] = getattr(metadata, "title", None) if metadata else None
+    row["composer"] = getattr(metadata, "composer", None) if metadata else None
 
     parts = list(score.parts)
     row["num_parts"] = len(parts)
+    row["num_measures"] = max(
+        (len(list(part.recurse().getElementsByClass(stream.Measure))) for part in parts),
+        default=0,
+    )
+    try:
+        row["total_duration"] = float(score.highestTime)
+    except (TypeError, ValueError, AttributeError):
+        row["total_duration"] = None
 
-    # Right-hand / left-hand melodic roles
-    row.update(get_hand_melody_metrics(parts))
+    initial_time = _initial_element(score, meter.TimeSignature)
+    initial_key = _initial_element(score, key.KeySignature)
+    row["time_signature"] = initial_time.ratioString if initial_time else None
+    row["key_signature"] = int(initial_key.sharps or 0) if initial_key else None
 
-    # Measures
-    measures = list(score.recurse().getElementsByClass(stream.Measure))
-    row["num_measures"] = len(measures)
-    row["actual_measures"] = max(
-        (
-            len(list(part.recurse().getElementsByClass(stream.Measure)))
-            for part in parts
-        ),
-        default=0
+    rh_sources, lh_sources, method = identify_hands(score)
+    row["hand_assignment_method"] = method
+    if method == "unreliable":
+        return row
+
+    rh_events = extract_hand_events(rh_sources)
+    lh_events = extract_hand_events(lh_sources)
+    total_duration = row["total_duration"]
+    usable_duration = total_duration if total_duration is not None else 0
+
+    row.update(extract_hand_features(rh_events, usable_duration, "RH"))
+    row.update(extract_hand_features(lh_events, usable_duration, "LH"))
+    row["both_onset_ratio"] = calculate_both_onset_ratio(rh_events, lh_events)
+    row["rhythm_mismatch_ratio"] = calculate_rhythm_mismatch_ratio(
+        rh_events, lh_events
     )
 
-    # Initial key signature
-    key_signature_sharps = get_initial_key_signature(parts)
-    row["key_signature_sharps"] = key_signature_sharps
-    row["no_key_signature"] = key_signature_sharps == 0
-
-    # Notes / chords / rests
-    notes = list(score.recurse().notes)
-
-    num_notes = 0
-    num_chords = 0
-    num_note_events = 0
-    num_accidentals = 0
-
-    for element in notes:
-        if isinstance(element, note.Note):
-            num_notes += 1
-            num_note_events += 1
-
-            if (
-                element.pitch.accidental is not None
-                and element.pitch.accidental.alter != 0
-            ):
-                num_accidentals += 1
-
-        elif isinstance(element, chord.Chord):
-            num_chords += 1
-            num_notes += len(element.pitches)
-
-            for pitch in element.pitches:
-                if (
-                    pitch.accidental is not None
-                    and pitch.accidental.alter != 0
-                ):
-                    num_accidentals += 1
-
-    row["num_notes"] = num_notes
-    row["num_chords"] = num_chords
-    row["num_accidentals"] = num_accidentals
-
-    if num_notes > 0:
-        row["accidental_ratio"] = num_accidentals / num_notes
-
-    row["num_rest"] = len(
-        list(score.recurse().getElementsByClass(note.Rest))
+    rh_density = row["RH_note_density"]
+    lh_density = row["LH_note_density"]
+    row["RH_LH_density_difference"] = (
+        abs(rh_density - lh_density)
+        if rh_density is not None and lh_density is not None else None
     )
-
-    # Pitch range
-    pitch_min, pitch_max, pitch_range = get_pitch_range(score)
-
-    row["pitch_min"] = pitch_min or ""
-    row["pitch_max"] = pitch_max or ""
-    row["pitch_range_semitones"] = pitch_range
-
-    # Large leaps
-    total_events = 0
-    total_large_leaps = 0
-    all_leap_sizes = []
-
-    for part in parts:
-        note_sequences = get_note_sequences(part)
-
-        for events in note_sequences:
-            total_events += max(0, len(events) - 1)
-
-            leap_count, leap_sizes = count_large_leaps(
-                events,
-                threshold_semitones=large_leap_threshold
-            )
-
-            total_large_leaps += leap_count
-            all_leap_sizes.extend(leap_sizes)
-
-    row["num_large_leaps"] = total_large_leaps
-
-    if total_events > 0:
-        row["large_leap_ratio"] = total_large_leaps / total_events
-
-    if all_leap_sizes:
-        row["max_large_leap_semitones"] = max(all_leap_sizes)
-
-    # Polyphony
-    row["max_polyphony"] = calculate_polyphony(score)
-
-    # Duration
-    row["duration_quarter_lengths"] = estimate_duration(score)
-
-    if row["duration_quarter_lengths"] > 0:
-        row["note_density"] = (
-            row["num_notes"] / row["duration_quarter_lengths"]
-        )
-
-    total_note_chord_events = num_note_events + num_chords
-
-    if total_note_chord_events > 0:
-        row["chord_ratio"] = num_chords / total_note_chord_events
-
-    # Tempo
-    bpm = get_tempo(score)
-
-    if bpm is not None:
-        row["tempo_bpm"] = bpm
-
-    # Time signatures
-    row["time_signatures"] = get_time_signatures(score)
-
+    row["total_note_density"] = (
+        (row["RH_note_count"] + row["LH_note_count"]) / total_duration
+        if total_duration is not None and total_duration > 0 else None
+    )
     return row
 
 
-def analyze_folder(
-    input_folder,
-    output_csv="scoresight_musicxml_analysis.csv",
-    large_leap_threshold=10
-):
-    files = []
+def analyze_score(file_path):
+    """Analyze one file and always return a CSV-compatible result row."""
+    try:
+        return _analyze_score(file_path)
+    except Exception as exc:
+        # parse_score catches parser exceptions itself. Therefore an exception
+        # reaching this wrapper occurred later, during feature extraction.
+        row = _empty_row(file_path)
+        row["parse_success"] = True
+        row["analysis_error"] = str(exc)
+        return row
 
-    for root, dirs, filenames in os.walk(input_folder):
+
+def find_musicxml_files(input_folder):
+    files = []
+    for root, _, filenames in os.walk(input_folder):
         for filename in filenames:
             path = Path(root) / filename
-
             if path.suffix.lower() in SUPPORTED_EXTENSIONS:
                 files.append(path)
+    return sorted(files, key=lambda path: str(path).lower())
 
+
+def main(input_folder=INPUT_FOLDER, output_csv=OUTPUT_CSV):
+    files = find_musicxml_files(input_folder)
     print(f"Found {len(files)} MusicXML files.")
 
     results = []
+    for index, file_path in enumerate(files, start=1):
+        print(f"[{index}/{len(files)}] Analyzing: {file_path.name}")
+        results.append(analyze_score(file_path))
 
-    for i, file_path in enumerate(files, start=1):
-
-        print(
-            f"[{i}/{len(files)}] "
-            f"Analyzing: {file_path.name}"
-        )
-
-        row = analyze_score(
-            file_path,
-            large_leap_threshold=large_leap_threshold
-        )
-
-        if meets_filter_criteria(row):
-            row["selected"] = True
-            results.append(row)
-
-    fieldnames = CSV_FIELDNAMES
-
-    with open(
-        output_csv,
-        "w",
-        newline="",
-        encoding="utf-8-sig"
-    ) as f:
-
-        writer = csv.DictWriter(
-            f,
-            fieldnames=fieldnames
-        )
-
+    with open(output_csv, "w", newline="", encoding="utf-8-sig") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=CSV_FIELDNAMES)
         writer.writeheader()
         writer.writerows(results)
 
+    successful = sum(row["parse_success"] is True for row in results)
+    failed = len(results) - successful
+    identified = sum(
+        row["parse_success"] is True
+        and row["hand_assignment_method"] != "unreliable"
+        for row in results
+    )
+    fallback = sum(
+        row["hand_assignment_method"] == "average_pitch_fallback" for row in results
+    )
+    unreliable = sum(
+        row["parse_success"] is True
+        and row["hand_assignment_method"] == "unreliable"
+        for row in results
+    )
+    analysis_errors = sum(bool(row["analysis_error"]) for row in results)
+
     print()
-    print(f"Total files analyzed: {len(files)}")
-    print(f"Files kept: {len(results)}")
-    print(f"CSV saved to: {output_csv}")
+    print(f"Total files found: {len(files)}")
+    print(f"Successfully parsed: {successful}")
+    print(f"Parse failures: {failed}")
+    print(f"RH/LH successfully identified: {identified}")
+    print(f"Average-pitch fallback used: {fallback}")
+    print(f"Unreliable hand assignments: {unreliable}")
+    print(f"Feature extraction errors: {analysis_errors}")
+    print(f"CSV saved to: {Path(output_csv).resolve()}")
 
 
 if __name__ == "__main__":
-
-    INPUT_FOLDER = "./candidate_musicxml_full_bothhands"
-
-    OUTPUT_CSV = "scoresight_musicxml_analysis.csv"
-
-    analyze_folder(
-        INPUT_FOLDER,
-        OUTPUT_CSV,
-        large_leap_threshold=10
-    )
+    main()
